@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+  <title>Simple Omelette Recipe</title>
+  <style>
+    :root {
+      --primary-color: #222; /* Main text color */
+      --secondary-color: #95625a; /* Accent color from the image design */
+      --bg-color: #fdf3ed; /* Background color */
+      --font-family: 'Outfit', serif; /* Correct font variable */
+    }
+
+    body {
+      
+      font-family: var(--font-family);
+      background-color: var(--bg-color);
+      line-height: 1.6;
+      color: var(--primary-color);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 1rem;
+    }
+
+    .image {
+      width: 100%;
+      border-radius: 8px; /* Default border-radius */
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin: 20px 0;
+      font-family: var(--font-family); /* Apply Outfit font */
+    }
+
+    p {
+      margin: 10px 0;
+      font-family: var(--font-family); /* Apply Outfit font */
+    }
+
+    .highlight {
+      background: #fff7fc;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    .highlight p {
+      color: #7d3f58;
+      font-family: var(--font-family); /* Apply Outfit font */
+    }
+
+    h2 {
+      color: var(--secondary-color); /* Use the accent color for section headings */
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      font-family: var(--font-family); /* Apply Outfit font */
+    }
+
+    .ingredients ul, .instructions ol {
+      padding-left: 20px;
+      font-family: var(--font-family); /* Apply Outfit font */
+    }
+
+    .ingredients ul li, .instructions ol li {
+      margin-bottom: 10px;
+    }
+
+    .instructions ol {
+      list-style: none; /* Remove default numbering */
+      counter-reset: instructions-counter; /* Reset counter */
+    }
+
+    .instructions ol li {
+      position: relative;
+      padding-left: 30px;
+    }
+
+    .instructions ol li::before {
+      content: counter(instructions-counter) ".";
+      counter-increment: instructions-counter; /* Increment counter */
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--secondary-color); /* Change number color */
+      font-weight: bold;
+    }
+
+    .nutrition {
+      margin-bottom: 30px;
+    }
+
+    .nutrition-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    .nutrition-table th, .nutrition-table td {
+      text-align: left;
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+      font-family: var(--font-family); /* Apply Outfit font */
+    }
+
+    .nutrition-table td {
+      color: var(--secondary-color); /* Accent color for table headers */
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+body{
+  margin: 0;
+  padding: 0;
+}
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .image {
+        max-width: 100%;
+        background-attachment: fixed;
+        
+       
+        scale: 1.25;
+        border-radius: 0; /* Remove border-radius on mobile */
+      }
+
+      .container {
+        border-radius: 0; /* Remove border-radius of the container on mobile */
+      }
+
+     
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="assets/images/image-omelette.jpeg" alt="Simple Omelette" class="image">
+    <h1>Simple Omelette Recipe</h1>
+    <p>An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.</p>
+    
+    <div class="highlight">
+      <p><strong>Preparation time</strong></p>
+      <ul>
+        <li><strong>Total:</strong> Approximately 10 minutes</li>
+        <li><strong>Preparation:</strong> 5 minutes</li>
+        <li><strong>Cooking:</strong> 5 minutes</li>
+      </ul>
+    </div>
+
+    <div class="ingredients">
+      <h2>Ingredients</h2>
+      <ul>
+        <li>2-3 large eggs</li>
+        <li>Salt, to taste</li>
+        <li>Pepper, to taste</li>
+        <li>1 tablespoon of butter or oil</li>
+        <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+      </ul>
+    </div>
+
+    <div class="instructions">
+      <h2>Instructions</h2>
+      <ol>
+        <li><strong>Beat the eggs:</strong> In a bowl, beat the eggs with a pinch of salt and pepper until well mixed. Add a tablespoon of water or milk for a fluffier texture.</li>
+        <li><strong>Heat the pan:</strong> Place a non-stick frying pan over medium heat and add butter or oil.</li>
+        <li><strong>Cook the omelette:</strong> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly coat the surface.</li>
+        <li><strong>Add fillings (optional):</strong> Sprinkle chosen fillings over one half of the omelette while it’s still slightly runny.</li>
+        <li><strong>Fold and serve:</strong> Carefully fold the omelette and let it cook for another minute. Then slide it onto a plate.</li>
+        <li><strong>Enjoy:</strong> Serve hot, with additional salt and pepper if needed.</li>
+      </ol>
+    </div>
+
+    <div class="nutrition">
+      <h2>Nutrition</h2>
+      <p>The table below shows nutritional values per serving without the additional fillings.</p>
+      <table class="nutrition-table">
+        <tr>
+          <th>Calories</th>
+          <td>277 kcal</td>
+        </tr>
+        <tr>
+          <th>Carbs</th>
+          <td>0 g</td>
+        </tr>
+        <tr>
+          <th>Protein</th>
+          <td>20 g</td>
+        </tr>
+        <tr>
+          <th>Fat</th>
+          <td>22 g</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
